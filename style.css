@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 0;
+}
+
+body{
+    background-color:   #22254b;
+}
+
+.header{
+    padding: 1rem;
+    background-color: #373b69;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100%;
+}
+
+
+.text{
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+}
+
+
+.search{
+    background-color: #373b69;
+    border-style: solid;
+    border-color: #22254b;
+    border-width: 2px;
+    border-radius: 30px;
+    padding: 8px;
+    font-family: Poppins;
+    margin-right: 30px;
+    color: white;
+}
+
+.search:focus{
+    outline: 0;
+}
+
+.search::placeholder{
+    color: aliceblue;
+}
+
+.main{
+    padding-top: 30px;
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap; /*SIĞMAYAN ALTA KAYAR*/
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.movie{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overview{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #fff;
+    max-height: 100%;
+    transform:translateY(100%);
+    transition:transform 0.3s ease-in;
+    overflow-y: auto;
+
+}
+
+.overview-text{
+    color: #22254b;
+    font-size: 12px;
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.strong{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.movieCard{
+    background-color: #373b69;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.movieImg{
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.movieInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 15px;
+    height: 60px;
+}
+
+.movieTitle-wrapper{
+    width: 100%;
+}
+
+.movieTitle{
+    margin-top: 6px;
+}
+
+.movieScore-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movieScore{
+    background-color: #22254b;
+    padding: 2px 5px;
+}
+
+.green{
+    color: lightgreen;
+}
+
+.orange{
+    color: orange;
+}
+
+.red{
+    color: red;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+    color: white;
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.pageBut{
+    margin: 0px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.current{
+    border-style: solid;
+    border-color: orange;
+    border-width: 7px;
+    border-radius: 50px;
+    padding: 10px 20px;
+}
+
+.disabled{
+    color: gray;
+    cursor: not-allowed;
+}
